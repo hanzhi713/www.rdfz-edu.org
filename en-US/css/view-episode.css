@@ -1,0 +1,115 @@
+* {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#top {
+	margin: 0 0 0 0;
+	height: 60px;
+	background-color: #BBFFBE;
+}
+#top_bar {
+	width: 1000px;
+	margin: auto auto;
+}
+#content {
+	width: 1000px;
+	background-color: #FFFFFF;
+	margin: auto auto;
+}
+#title {
+	line-height: 60px;
+	font-size: 26px;
+	color: #000000;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: normal;
+}
+#title:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
+#left_menu {
+	float: left;
+	width: 250px;
+	height: inherit;
+	background-color: #DDFFF8;
+}
+#main {
+	float: left;
+	width: 750px;
+	height: inherit;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+.SH {
+	background-color: #FFCC99;
+	text-align: left;
+	font-size: 17pt;
+	color: #4A0095;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: normal;
+	padding: 5px;
+}
+.SH:hover {
+	text-decoration: underline;
+}
+.menu {
+	cursor: pointer;
+	font-size: 19px;
+	padding: 10px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.menu:hover {
+	background-color: #FFFFFF;
+}
+.context {
+	font-size: 18px;
+	text-align: center;
+	width: 750px;
+}
+.infotable {
+	width: 520px;
+	font-size: 22px;
+	margin: auto auto;
+}
+.infotable tr {
+	height: 50px;
+}
+.infotable tr td input {
+	font-size: 20px;
+	width: auto;
+}
+.infotable tr td select {
+	font-size: 20px;
+}
+.submitbutton {
+	font-size: 22px;
+	padding: 5px;
+}
+.progress {
+	width: 100%;
+	border: 1px solid #4da8fe;
+	border-radius: 40px;
+	height: 25px;
+	position: relative;
+}
+.progress .label {
+	position: relative;
+	text-align: center;
+}
+.progress .bar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #4D90FE;
+	height: 25px;
+	border-radius: 40px;
+	min-width: 20px;
+}
+.checkbox{
+	width: 18px; height: 18px;
+}
+

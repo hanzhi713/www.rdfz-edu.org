@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="shortcut icon" href="../Doc/head.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <title>Reset Password</title>
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <script src="locale/for_js.js"></script>
+    <script src="js/check_vcode.min.js"></script>
+    <script src="js/check_email.min.js"></script>
+    <script src="js/refresh_code.min.js"></script>
+    <script type="text/javascript">
+        function isValid(form) {
+            if (!checkEmail(form))
+                return false;
+            if (!checkVcode(form))
+                return false;
+            setTimeout("refreshCode()", 250);
+            return true;
+        }
+    </script>
+</head>
+<body style="background-color:#FFFFE5; background-image:url(../Doc/form_background.jpg); background-size:100%; background-repeat:no-repeat">
+<div id="all">
+    <div id="content">
+        <div id="top">
+            <div id="top_pic"><br/>
+                <br/>
+                <span id="title" onclick="window.location.href='index.php';">&nbsp;Educational Resources</span></div>
+        </div>
+        <br/>
+        <span id="login">Reset&nbsp;Password</span> <br/>
+        <br/>
+        <form action="resetPass.php" method="post" onSubmit="return isValid(this);">
+            <table id="login_tab">
+                <tr>
+                    <td><label for="email">Email Address:&nbsp;</label></td>
+                    <td><input type="text" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="vcode">Validation Code:&nbsp;</label></td>
+                    <td>
+                        <input type="text" name="vcode" id="vcode" style="width:100px;">
+                        <div style="float:right;">
+                            <img id="vc" src="phps/generateCode.php" onClick="this.src='phps/generateCode.php'"
+                                 width="80px" height="26px">
+                            <br/>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <input type="submit" name="submit" value=" Reset " style="font-size:20px; padding:5px;">
+            <br/>
+            <br/>
+        </form>
+    </div>
+    <p style="font-size: 16px; padding: 5px;clear:both; background-color: #DDDDDD; color:#000000;">
+        © 2016-2017 教育资源 Educational Resources 周涵之 Hanzhi Zhou. All Rights Reserved.
+    </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../Doc/head.ico" type="image/x-icon">
+    <title>Register</title>
+    <link href="css/reg.css" rel="stylesheet" type="text/css">
+    <script src="locale/for_js.js"></script>
+    <script src="js/check_email.min.js"></script>
+    <script src="js/check_password_consistency.min.js"></script>
+    <script src="js/check_vcode.min.js"></script>
+    <script src="js/refresh_code.min.js"></script>
+    <script type="text/javascript">
+        function isValid(form) {
+            if (!checkEmail(form))
+                return false;
+            if (!checkPass(form))
+                return false;
+            if (!checkVcode(form))
+                return false;
+            setTimeout("refreshCode()", 250);
+            return true;
+        }
+    </script>
+</head>
+
+<body style="background-color:#FFFFE5; background-image:url(../Doc/form_background.jpg); background-size:100%; background-repeat:no-repeat">
+<div id="all">
+    <div id="content">
+        <div id="top">
+            <div id="top_pic"><br/>
+                <br/>
+                <span id="title" onclick="window.location.href='index.php';">&nbsp;Educational Resources</span></div>
+        </div>
+        <br/>
+        <span id="register">Register&nbsp;Page</span> <br/>
+        <br/>
+        <div id="register_info"> Items labeled "<span class="requiredItem">*</span>" are required <br/>
+            Password length must be no less than 6 and less than or equal to 20
+        </div>
+        <form action="phps/register.php" method="post" onSubmit="return isValid(this);" target="resultData">
+            <div id="register_area"><br/>
+                <table id="reg_tab">
+                    <tr>
+                        <td><label for="email">Email Address:&nbsp;</label></td>
+                        <td><input type="text" name="email" id="email"></td>
+                        <td><span class="requiredItem">*</span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password:&nbsp;</label></td>
+                        <td><input type="password" name="password" id="password"></td>
+                        <td><span class="requiredItem">*</span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="conpass">Confirm password:&nbsp;</label></td>
+                        <td><input type="password" name="conpass" id="conpass"></td>
+                        <td><span class="requiredItem">*</span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="vc">Validation Code:&nbsp;</label></td>
+                        <td><input type="text" name="vcode" id="vc" style="width:100px;">
+                            <div style="float:right;">
+                                <img id="vcode" src="phps/generateCode.php" onClick="this.src='phps/generateCode.php'" width="80px" height="26px"> <br/>
+                            </div>
+                        </td>
+                        <td><span class="requiredItem">*</span></td>
+                    </tr>
+                </table>
+                <iframe name="resultData" class="iframe" scrolling="no"></iframe>
+                <br/>
+                <input type="submit" name="submit" value=" Confirm " style="font-size:20px; padding:5px;">
+                <br/>
+                <br/>
+            </div>
+        </form>
+    </div>
+    <p style="font-size: 16px; padding: 5px;clear:both; background-color: #DDDDDD; color:#000000;">
+        © 2016-2017 教育资源 Educational Resources 周涵之 Hanzhi Zhou. All Rights Reserved.
+    </p>
+</div>
+</body>
+</html>

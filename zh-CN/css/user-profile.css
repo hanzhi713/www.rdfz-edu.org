@@ -1,0 +1,141 @@
+* {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.checkbox{
+	width: 18px; height: 18px;
+}
+#top {
+	margin: 0 0 0 0;
+	height: 60px;
+	background-color: #BBFFBE;
+}
+#top_bar {
+	width: 1000px;
+	margin: auto auto;
+}
+#content {
+	width: 1000px;
+	background-color: #FFFFFF;
+	margin: auto auto;
+}
+#title {
+	line-height: 60px;
+	font-size: 26px;
+	color: #000000;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: normal;
+}
+#title:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
+#left_menu {
+	float: left;
+	width: 250px;
+	height: inherit;
+	background-color: #DDFFF8;
+}
+#main {
+	float: left;
+	width: 750px;
+	height: inherit;
+	text-align: center;
+}
+.SH {
+	background-color: #FFCC99;
+	text-align: left;
+	font-size: 17pt;
+	color: #4A0095;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: normal;
+	padding: 5px;
+}
+.SH:hover {
+	text-decoration: underline;
+}
+.menu {
+	cursor: pointer;
+	font-size: 19px;
+	padding: 10px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.menu:hover {
+	background-color: #FFFFFF;
+}
+.context {
+	font-size: 18px;
+	text-align: center;
+	width: 750px;
+}
+.infotable {
+	width: 520px;
+	font-size: 20px;
+	margin: auto auto;
+}
+.infotable tr {
+	height: 50px;
+}
+.infotable tr td input {
+	font-size: 18px;
+}
+.infotable tr td select {
+	font-size: 18px;
+}
+.submitbutton {
+	font-size: 20px;
+	padding: 5px;
+}
+#comment_tab {
+	width: 730px;
+	border: solid 2px;
+	border-spacing: 0px;
+	margin: auto auto;
+}
+.comment {
+	font-size: 20px;
+}
+.comment:hover {
+	background-color: #FFFEDF;
+}
+#comment_tab tr td {
+	border: solid 1px;
+	border-spacing: 0px;
+	cursor: pointer;
+}
+#tab_title {
+	font-size: 22px;
+	font-weight: bold;
+}
+.reply_tab {
+	width: 620px;
+	text-align: left;
+}
+.reply_headshot {
+	padding-top: 10px;
+	width: 40px;
+	height: 40px;
+}
+.un_reply {
+	font-size: 20px;
+	color: #0668FF;
+}
+.uc_reply {
+	font-size: 18px;
+	cursor: text;
+}
+.replytime {
+	color: #646464;
+	font-size: 16px;
+	cursor: text;
+}
+.episode_link {
+	color: inherit;
+}
+.episode_link:hover {
+	font-weight: bold;
+}
+
